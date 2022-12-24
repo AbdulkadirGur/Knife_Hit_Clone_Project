@@ -47,14 +47,5 @@ public class LogRotation : MonoBehaviour
             rotationIndex = rotationIndex < rotationPattern.Length ? rotationIndex : 0;
         }
     }
-    void Start()
-    {
-        
-    }
-
     
-    void Update()
-    {
-        
-    }
 }

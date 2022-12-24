@@ -25,6 +25,8 @@ public class KnifeScript : MonoBehaviour
             rb.AddForce(throwForce, ForceMode2D.Impulse);
             rb.gravityScale = 1;
 
+            //TODO :Decrement number of aviable knife
+
         }
        
     }
@@ -36,7 +38,7 @@ public class KnifeScript : MonoBehaviour
 
         isActive= false;
 
-        if(collision.collider.tag == "Log")
+        if(collision.collider.tag == "kutuk")
         {
             rb.velocity = new Vector2(0, 0);
             rb.bodyType = RigidbodyType2D.Kinematic;
@@ -45,8 +47,11 @@ public class KnifeScript : MonoBehaviour
             knifeCollider.offset = new Vector2(knifeCollider.offset.x, -0.4f);
             knifeCollider.size = new Vector2(knifeCollider.size.x, 1.2f);
 
-            // TODO Spawn another knife 
-           
+            // TODO Spawn another knife           
+        }
+        else if(collision.collider.tag == "bicak")
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -2);
         }
        
     }
