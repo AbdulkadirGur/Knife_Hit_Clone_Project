@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class GameUI : MonoBehaviour
 {
     [SerializeField]
@@ -34,7 +36,8 @@ public class GameUI : MonoBehaviour
     public void DecrementDisplayedKnifeCount()
     {
         panelKnives.transform.GetChild(knifeIconIndexToChange++)
-            
+            .GetComponent<Image>().color = usedKnifeIconColor;
+
 
     }
 

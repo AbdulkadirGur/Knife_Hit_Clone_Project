@@ -24,8 +24,7 @@ public class KnifeScript : MonoBehaviour
         {
             rb.AddForce(throwForce, ForceMode2D.Impulse);
             rb.gravityScale = 1;
-
-            //TODO :Decrement number of aviable knife
+            GameController.Instance.GameUI.DecrementDisplayedKnifeCount();
 
         }
        
@@ -33,6 +32,7 @@ public class KnifeScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (!isActive)
             return;
 
@@ -40,6 +40,9 @@ public class KnifeScript : MonoBehaviour
 
         if(collision.collider.tag == "kutuk")
         {
+            GetComponent<ParticleSystem>().Play();
+
+
             rb.velocity = new Vector2(0, 0);
             rb.bodyType = RigidbodyType2D.Kinematic;
             this.transform.SetParent(collision.collider.transform);
@@ -47,11 +50,12 @@ public class KnifeScript : MonoBehaviour
             knifeCollider.offset = new Vector2(knifeCollider.offset.x, -0.4f);
             knifeCollider.size = new Vector2(knifeCollider.size.x, 1.2f);
 
-            // TODO Spawn another knife           
+            GameController.Instance.OnSuccessfulKnifeHit();          
         }
         else if(collision.collider.tag == "bicak")
         {
             rb.velocity = new Vector2(rb.velocity.x, -2);
+            GameController.Instance.StartGameOverSequance(false);
         }
        
     }
