@@ -117,25 +117,25 @@ public class GameController : MonoBehaviour
     }
     public void Nextlvlbutton1()
     {
-        FindObjectOfType<GameController>().Voices[6].Play();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(3);
 
     }
     public void Nextlvlbutton2()
     {
-        FindObjectOfType<GameController>().Voices[6].Play();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(4);
 
     }
     public void Nextlvlbutton3()
     {
-        FindObjectOfType<GameController>().Voices[6].Play();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
 
     }
     public void Nextlvlbutton4()
     {
-        FindObjectOfType<GameController>().Voices[6].Play();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(6);
 
     }

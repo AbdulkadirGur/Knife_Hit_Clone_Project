@@ -1318,6 +1318,22 @@ PrefabInstance:
       propertyPath: rotationPattern.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[0].speed
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[1].speed
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[3].speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[4].speed
+      value: -500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
 --- !u!1 &519420028
