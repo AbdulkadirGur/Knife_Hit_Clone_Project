@@ -350,6 +350,8 @@ MonoBehaviour:
   Nextlvlbutton: {fileID: 791701489}
   Nextlvlbutton1: {fileID: 791701489}
   Nextlvlbutton2: {fileID: 0}
+  Nextlvlbutton3: {fileID: 0}
+  Nextlvlbutton4: {fileID: 0}
   panelKnives: {fileID: 1765287260}
   iconKnife: {fileID: 2832013190818063611, guid: 14488a258256eb6489f6a1f0b2f7b52c, type: 3}
   usedKnifeIconColor: {r: 1, g: 1, b: 1, a: 0.39215687}
@@ -1315,6 +1317,18 @@ PrefabInstance:
     - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
       propertyPath: rotationPattern.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[0].speed
+      value: -900
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[1].speed
+      value: -800
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: rotationPattern.Array.data[2].speed
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
