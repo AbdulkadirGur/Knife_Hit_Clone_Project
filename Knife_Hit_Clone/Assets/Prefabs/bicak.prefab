@@ -149,6 +149,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwForce: {x: 0, y: 40}
+  Voices:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!198 &3915147619789360489
 ParticleSystem:
   m_ObjectHideFlags: 0

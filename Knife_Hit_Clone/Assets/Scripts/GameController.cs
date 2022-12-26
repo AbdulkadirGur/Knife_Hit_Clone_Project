@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(GameUI))]
 public class GameController : MonoBehaviour
 {
+    
     public static GameController Instance { get; private set; }
 
     [SerializeField]
@@ -19,7 +20,17 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject knifeObject;
 
+    public AudioSource[] Voices;
+    [SerializeField]
+    
+
+
+
+
+
     public GameUI  GameUI { get; private set; }
+
+
 
     private void Awake()
     {
@@ -27,10 +38,15 @@ public class GameController : MonoBehaviour
         GameUI = GetComponent<GameUI>();
     }
 
-    private void Start()
+    public void Start()
     {
+        
         GameUI.SetInitialDisplayedKnifeCount(knifeCount);
         SpawnKnife();
+    }
+    public void Update()
+    {
+        
     }
 
     public void OnSuccessfulKnifeHit()
@@ -38,7 +54,8 @@ public class GameController : MonoBehaviour
         if(knifeCount > 0) 
         {
             SpawnKnife();
-        
+           
+
         }
         else
         {
@@ -48,15 +65,17 @@ public class GameController : MonoBehaviour
 
     private void SpawnKnife()
     {
-        knifeCount--;        
-        
+        knifeCount--;                
         Instantiate(knifeObject, knifeSpawnPosition, transform.rotation * Quaternion.Euler(180, 0, 0));
+        
+
 
     }
 
     public void StartGameOverSequance(bool win)
     {
         StartCoroutine("GameOverSequanceCoroutine", win  );
+        
     }
 
     private IEnumerator  GameOverSequanceCoroutine(bool win)
@@ -64,17 +83,62 @@ public class GameController : MonoBehaviour
         if(win) 
         {
             yield return new WaitForSecondsRealtime(0.3f);
-            RestartGame();
+            GameUI.NextLVL();
+
+            
+            
         }
         else
         {
-            GameUI.ShowRestartButton();
+            GameUI.ShowRestartButtonAndHome();
+            
         }
            
     }
 
     public void RestartGame()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        FindObjectOfType<GameController>().Voices[7].Play();
     }
+    public void HomeBTN()
+    {
+        FindObjectOfType<GameController>().Voices[7].Play();
+        SceneManager.LoadScene(1);
+
+
+    }
+    public void Nextlvlbutton()
+    {
+        FindObjectOfType<GameController>().Voices[6].Play();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        
+    }
+    public void Nextlvlbutton1()
+    {
+        FindObjectOfType<GameController>().Voices[6].Play();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+
+    }
+    public void Nextlvlbutton2()
+    {
+        FindObjectOfType<GameController>().Voices[6].Play();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+
+    }
+    public void Nextlvlbutton3()
+    {
+        FindObjectOfType<GameController>().Voices[6].Play();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+
+    }
+    public void Nextlvlbutton4()
+    {
+        FindObjectOfType<GameController>().Voices[6].Play();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+
+    }
+    
+
 }

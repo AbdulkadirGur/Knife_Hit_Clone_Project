@@ -12,6 +12,8 @@ public class KnifeScript : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D knifeCollider;
 
+    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,6 +25,7 @@ public class KnifeScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && isActive) 
         {
             rb.AddForce(throwForce, ForceMode2D.Impulse);
+            //FindObjectOfType<GameController>().Voices[5].Play();
             rb.gravityScale = 1;
             GameController.Instance.GameUI.DecrementDisplayedKnifeCount();
 
@@ -41,7 +44,7 @@ public class KnifeScript : MonoBehaviour
         if(collision.collider.tag == "kutuk")
         {
             GetComponent<ParticleSystem>().Play();
-
+            FindObjectOfType<GameController>().Voices[4].Play();
 
             rb.velocity = new Vector2(0, 0);
             rb.bodyType = RigidbodyType2D.Kinematic;
@@ -56,6 +59,7 @@ public class KnifeScript : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, -2);
             GameController.Instance.StartGameOverSequance(false);
+            FindObjectOfType<GameController>().Voices[3].Play();
         }
        
     }
