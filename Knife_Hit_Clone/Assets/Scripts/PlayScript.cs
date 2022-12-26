@@ -10,7 +10,7 @@ public class PlayScript : MonoBehaviour
     public void PlayBTN()
     {
         
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         sound.Play();
         
 

@@ -100,7 +100,7 @@ public class GameController : MonoBehaviour
     public void HomeBTN()
     {
         FindObjectOfType<GameController>().Voices[7].Play();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
 
 
     }
