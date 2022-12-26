@@ -348,6 +348,10 @@ MonoBehaviour:
   restartBTN: {fileID: 1870000122}
   HomeBtn: {fileID: 684740279}
   Nextlvlbutton: {fileID: 791701489}
+  Nextlvlbutton1: {fileID: 0}
+  Nextlvlbutton2: {fileID: 0}
+  Nextlvlbutton3: {fileID: 0}
+  Nextlvlbutton4: {fileID: 0}
   panelKnives: {fileID: 1765287260}
   iconKnife: {fileID: 2832013190818063611, guid: 14488a258256eb6489f6a1f0b2f7b52c, type: 3}
   usedKnifeIconColor: {r: 1, g: 1, b: 1, a: 0.39215687}
@@ -391,7 +395,6 @@ MonoBehaviour:
   - {fileID: 432310134}
   - {fileID: 432310133}
   - {fileID: 432310132}
-  sahneler: []
 --- !u!82 &432310132
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1263,6 +1266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8144970630958371621, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8144970632610581537, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
       propertyPath: m_Name
       value: LogMotor

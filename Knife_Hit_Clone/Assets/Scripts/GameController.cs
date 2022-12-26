@@ -22,11 +22,6 @@ public class GameController : MonoBehaviour
 
     public AudioSource[] Voices;
     [SerializeField]
-    
-
-
-
-
 
     public GameUI  GameUI { get; private set; }
 

@@ -1266,6 +1266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8144970630958371621, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8144970632610581537, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
       propertyPath: m_Name
       value: LogMotor
@@ -1320,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
       propertyPath: rotationPattern.Array.data[0].speed
-      value: 700
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8144970632610581541, guid: 7383adde8f73a5b4ea10b5d37bc2166a, type: 3}
       propertyPath: rotationPattern.Array.data[1].speed
